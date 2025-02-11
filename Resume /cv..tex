@@ -1,0 +1,162 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+% autres packages pour la mise en forme
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+% environnement tabularx
+\usepackage{tabularx}
+
+% pour les listes dans la section expérience
+\usepackage{enumitem}
+
+% version centrée du type de colonne 'X'
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+% pour éviter le débordement des tableaux sur les pages suivantes
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+% section personnalisée
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+% sections du CV inspirées par : 
+% http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+% pour les publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+% configuration du package hyperref, et couleurs pour les liens
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+% pour les icônes sociales
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% pour le soulignement
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Choisissez la police de votre choix
+
+\begin{document}
+
+% pages non numérotées
+\pagestyle{empty} 
+\hspace{1cm}
+\raisebox{-0.5\height}{\includegraphics[width=2cm,height=2cm]{abderrahmane-hafdane-photo.png}}
+\begin{tabularx}{\linewidth}{@{} C @{}}
+
+\color[HTML]{1C033C} \Huge{HAFDANE ABDERRAHMANE} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{{{{\faEnvelope} abdo.abido@gmail.com}} $|$}
+\textcolor[HTML]{371e77}{{{\faMobile} (212) 621-086882}}
+
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faGithub} github.com/AbdoKujo}} $|$}
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/abderrahmane-hafdane}}}
+\end{tabularx}
+
+\section{Compétences}
+\color[HTML]{1C033C}\textbf{Langages :} Java, C, C++, Python, HTML, CSS, JavaScript, PHP\\[3pt]
+\color[HTML]{1C033C}\textbf{Technologies \& Outils :} React.js, Laravel, MySQL, Git/GitHub, Linux, Cisco, UML, Merise\\[3pt]
+
+% Expérience professionnelle
+\section{Expérience professionnelle}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Développeur Freelance}} \hfill \color[HTML]{371e77} 2024 - Présent \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Réalisation de projets en développement web, notamment la création d'applications et de sites web dynamiques
+        \item Utilisation des technologies telles que HTML, CSS, JavaScript, PHP (Laravel) et React
+        \item Résolution de problématiques clients grâce à des solutions personnalisées et innovantes
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{{Gestionnaire Airbnb}} \hfill \color[HTML]{371e77} 2022 - Présent \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Gestion de projets et organisation des tâches sous contraintes de temps
+        \item Amélioration des compétences en communication et en résolution de problèmes
+        \item Compréhension approfondie des besoins des utilisateurs finaux
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% Éducation
+\section{Éducation}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{Faculté des Sciences et Techniques de Tanger (FSTT)} & \hfill \color[HTML]{371e77} 2024 - 2025 \\
+\color[HTML]{371e77} Licence Ingénierie de Développement d'Applications Informatiques (en cours) & \hfill \color[HTML]{4B28A4} \\[5pt]
+\color[HTML]{1C033C} \textbf{Faculté des Sciences et Techniques} & \hfill \color[HTML]{371e77} 2022 - 2024 \\
+\color[HTML]{371e77} Diplôme d'études supérieures (DEUST) en Physique, mathématiques, informatique & \hfill \color[HTML]{4B28A4} \\[5pt]
+\color[HTML]{1C033C} \textbf{Lycée Moulay Rachid} & \hfill \color[HTML]{371e77} 2021 \\
+\color[HTML]{371e77} BAC Sciences Physique, Mathématiques (Mention bien) & \hfill \color[HTML]{4B28A4}
+\end{tabularx}
+
+% Projets
+\section{Projets}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{Solution Web de Gestion Multiplateforme (2025-Actuel) :} Développement d'une solution centralisée "All for One" pour les gestionnaires de propriétés.
+        \item \textbf{Site web pour un magazine en ligne :} Utilisation de Laravel (architecture MVC).
+        \item \textbf{Jeu de casse-tête type labyrinthe :} Développé en C++ avec Raylib.
+        \item \textbf{Divers projets académiques :} Intégrant la Programmation Orientée Objet, le développement web, et la modélisation UML.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% Compétences relationnelles
+\section{Compétences relationnelles}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Esprit analytique et de synthèse
+        \item Adaptabilité et persévérance
+        \item Communication et résolution de problèmes
+        \item Curiosité, discipline et rigueur
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% Langues
+\section{Langues}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Français : B2
+        \item Anglais : B2
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% Centres d'intérêt
+\section{Centres d'intérêt}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Sports : Musculation, Football, Échecs
+        \item Résolution de problèmes
+        \item Esprit entrepreneurial
+        \item Programmation
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\end{document}
